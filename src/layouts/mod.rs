@@ -2,7 +2,6 @@ use yew::prelude::*;
 mod container;
 mod navs;
 
-#[warn(unused_imports)]
 use container::Container;
 use navs::Navigator;
 

@@ -1,4 +1,5 @@
-use layouts::LayoutComponent;
+use crate::layouts::LayoutComponent;
+
 use yew::prelude::*;
 
 #[function_component(App)]

@@ -1,2 +1,2 @@
-mod home;
-mod secure;
+pub mod home;
+pub mod secure;

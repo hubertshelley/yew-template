@@ -1,5 +1,10 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
+
+use crate::views::secure::Secure;
+use crate::views::home::Home;
+use crate::components::not_found::NotFound;
+
 #[derive(Clone, Routable, PartialEq)]
 pub enum MainRoute {
     #[at("/")]
@@ -11,12 +16,16 @@ pub enum MainRoute {
     NotFound,
 }
 
-pub fn routes_switch(routes: Route) -> Html {
+pub fn routes_switch(routes: MainRoute) -> Html {
     match routes {
-        Route::Home => html! { <h1>{ "Home" }</h1> },
-        Route::Secure => html! {
+        MainRoute::Home => html! {
+            <Home />
+        },
+        MainRoute::Secure => html! {
             <Secure />
         },
-        Route::NotFound => html! { <h1>{ "404" }</h1> },
+        MainRoute::NotFound => html! {
+            <NotFound />
+        },
     }
 }
